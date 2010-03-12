@@ -6,7 +6,7 @@ This is a simple SASS file that provides a number of useful mixins to achieve CS
 
 ## Rounded Corners
 
-## Syntax
+### Syntax
 
     +round(!radius)
     +round_[top|bottom]_[left|right](!radius)
