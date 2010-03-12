@@ -2,6 +2,8 @@
 
 This is a simple SASS file that provides a number of useful mixins to achieve CSS3 effects cross-browser. For each rule, the styles are implemented for as many browsers as possible.
 
+# Box Effects
+
 ## Rounded Corners
 
 ## Syntax
@@ -30,3 +32,34 @@ This is a simple SASS file that provides a number of useful mixins to achieve CS
 * Chrome
 * Opera
 * IE (no custom blur amount, no rgba colors)
+
+## Gradients
+
+### Syntax
+
+    +vertical_gradient(!from_color, !to_color)
+    +horizontal_gradient(!from_color, !to_color)
+
+### Browser Support
+
+* Firefox
+* Safari
+* Chrome
+* Opera
+* IE (only vertical)
+
+# Transformations
+
+## Rotate
+
+### Syntax
+
+    +rotate(!degrees)
+
+### Browser Support
+
+* Firefox
+* Safari
+* Chrome
+* Opera
+* IE
