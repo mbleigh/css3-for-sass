@@ -1,0 +1,102 @@
+//
+// == CSS 3 FOR SASS ==
+//
+// Provides convenience mixins to perform CSS3 styles
+// with a single declaration in as many browsers as
+// can be supported. Save it to your SASS path and
+// include it in your SASS stylesheet:
+//
+// Some inspiration came from http://cssplease.com/
+//
+// @import css3.sass
+//
+// ** Created by Michael Bleigh **
+
+
+//
+// Rounded Corners
+//
+
+=round(!radius)
+  :-moz-border-radius !radius
+  :-webkit-border-radius !radius
+  :border-radius !radius
+  
+=round_top_left(!radius)
+  :-moz-border-radius-topleft !radius
+  :-webkit-border-top-left-radius !radius
+  :border-top-left-radius !radius
+  
+=round_top_right(!radius)
+  :-moz-border-radius-topright !radius
+  :-webkit-border-top-right-radius !radius
+  :border-top-right-radius !radius
+  
+=round_bottom_left(!radius)
+  :-moz-border-radius-bottomleft !radius
+  :-webkit-border-bottom-left-radius !radius
+  :border-bottom-left-radius !radius
+  
+=round_bottom_right(!radius)
+  :-moz-border-radius-bottomright !radius
+  :-webkit-border-bottom-right-radius !radius
+  :border-bottom-right-radius !radius
+
+=round_top(!radius)
+  +round_top_right(!radius)
+  +round_top_left(!radius)
+  
+=round_bottom(!radius)
+  +round_bottom_left(!radius)
+  +round_bottom_right(!radius)
+  
+=round_left(!radius)
+  +round_top_left(!radius)
+  +round_bottom_left(!radius)
+  
+=round_right(!radius)
+  +round_top_right(!radius)
+  +round_bottom_right(!radius)
+  
+//
+// Box Shadow
+//
+
+=box_shadow(!x, !y, !blur, !color = black)
+  :-moz-box-shadow = !x !y !blur !color; /* FF3.5+ */
+  :-webkit-box-shadow = !x !y !blur !color; /* Saf3.0+, Chrome */
+  :box-shadow = !x !y !blur !color; /* Opera 10.5, IE 9.0 */
+  // IE 6, 7
+  :filter = "progid:DXImageTransform.Microsoft.dropshadow(OffX=#{!x}, OffY=#{!y}, Color='#{!color}')"
+  // IE 8
+  :-ms-filter = "\"progid:DXImageTransform.Microsoft.dropshadow(OffX=#{!x}, OffY=#{!y}, Color='#{!color}')\""
+  
+//
+// Gradients
+//
+
+=vertical_gradient(!from, !to, !bgcolor = !to)
+  :background-color !bgcolor
+  :background-image = "-webkit-gradient(linear, 0 0, 0 100%, from(#{!from}), to(#{!to}))"
+  :background-image = "-moz-linear-gradient(top, #{!from}, #{!to})"
+  :filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#{!from}', endColorstr='#{!to}')"
+  :-ms-filter = "\"progid:DXImageTransform.Microsoft.gradient(startColorstr='#{!from}', endColorstr='#{!to}')\"";
+
+=horizontal_gradient(!from, !to, !bgcolor = !to)
+  :background-color !bgcolor
+  :background-image = "-webkit-gradient(linear, 0 0, 0 100%, from(#{!from}), to(#{!to}))"
+  :background-image = "-moz-linear-gradient(top, #{!from}, #{!to})"
+  // No IE style that I'm aware of does this.
+
+
+//
+// Rotation
+//
+
+=rotate(!degrees)
+  !percent = !degrees / 360.0
+  :-moz-transform = "rotate(#{!degrees}deg)";
+  :-o-transform = "rotate(#{!degrees})";
+  :-webkit-transform = "rotate(#{!degrees}deg)";
+  :filter =  "progid:DXImageTransform.Microsoft.BasicImage(rotation=#{!percent})"
+  :-ms-filter = "progid:DXImageTransform.Microsoft.BasicImage(rotation=#{!percent})"; /* IE8
