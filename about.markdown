@@ -8,9 +8,9 @@ This is a simple SASS file that provides a number of useful mixins to achieve CS
 
 ### Syntax
 
-    +round(!radius)
-    +round_[top|bottom]_[left|right](!radius)
-    +round_[top|bottom|left|right](!radius)
+    +border-radius(!radius)
+    +border-[top|bottom]-[left|right]-radius(!radius)
+    +border-[top|bottom|left|right]-radius(!radius)
 
 ### Browser Support
 

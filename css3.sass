@@ -2,52 +2,52 @@
 // Rounded Corners
 //
 
-=round(!radius)
+=border-radius(!radius)
   :-moz-border-radius !radius
   :-webkit-border-radius !radius
   :border-radius !radius
   
-=round_top_left(!radius)
+=border-top-left-radius(!radius)
   :-moz-border-radius-topleft !radius
   :-webkit-border-top-left-radius !radius
   :border-top-left-radius !radius
   
-=round_top_right(!radius)
+=border-top-right-radius(!radius)
   :-moz-border-radius-topright !radius
   :-webkit-border-top-right-radius !radius
   :border-top-right-radius !radius
   
-=round_bottom_left(!radius)
+=border-bottom-left-radius(!radius)
   :-moz-border-radius-bottomleft !radius
   :-webkit-border-bottom-left-radius !radius
   :border-bottom-left-radius !radius
   
-=round_bottom_right(!radius)
+=border-bottom-right-radius(!radius)
   :-moz-border-radius-bottomright !radius
   :-webkit-border-bottom-right-radius !radius
   :border-bottom-right-radius !radius
 
-=round_top(!radius)
-  +round_top_right(!radius)
-  +round_top_left(!radius)
+=border-top-radius(!radius)
+  +border-top-right-radius(!radius)
+  +border-top-left-radius(!radius)
   
-=round_bottom(!radius)
-  +round_bottom_left(!radius)
-  +round_bottom_right(!radius)
+=border-bottom-radius(!radius)
+  +border-bottom-right-radius(!radius)
+  +border-bottom-left-radius(!radius)
   
-=round_left(!radius)
-  +round_top_left(!radius)
-  +round_bottom_left(!radius)
+=border-left-radius(!radius)
+  +border-top-left-radius(!radius)
+  +border-bottom-left-radius(!radius)
   
-=round_right(!radius)
-  +round_top_right(!radius)
-  +round_bottom_right(!radius)
+=border-right-radius(!radius)
+  +border-top-right-radius(!radius)
+  +border-bottom-right-radius(!radius)
   
 //
 // Box Shadow
 //
 
-=box_shadow(!x, !y, !blur, !color = black)
+=box-shadow(!x, !y, !blur, !color = black)
   :-moz-box-shadow = !x !y !blur !color; /* FF3.5+ */
   :-webkit-box-shadow = !x !y !blur !color; /* Saf3.0+, Chrome */
   :box-shadow = !x !y !blur !color; /* Opera 10.5, IE 9.0 */
@@ -60,14 +60,14 @@
 // Gradients
 //
 
-=vertical_gradient(!from, !to, !bgcolor = !to)
+=vertical-gradient(!from, !to, !bgcolor = !to)
   :background-color !bgcolor
   :background-image = "-webkit-gradient(linear, 0 0, 0 100%, from(#{!from}), to(#{!to}))"
   :background-image = "-moz-linear-gradient(top, #{!from}, #{!to})"
   :filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#{!from}', endColorstr='#{!to}')"
   :-ms-filter = "\"progid:DXImageTransform.Microsoft.gradient(startColorstr='#{!from}', endColorstr='#{!to}')\"";
 
-=horizontal_gradient(!from, !to, !bgcolor = !to)
+=horizontal-gradient(!from, !to, !bgcolor = !to)
   :background-color !bgcolor
   :background-image = "-webkit-gradient(linear, 0 0, 0 100%, from(#{!from}), to(#{!to}))"
   :background-image = "-moz-linear-gradient(top, #{!from}, #{!to})"
