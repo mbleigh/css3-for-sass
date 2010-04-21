@@ -23,7 +23,7 @@ This is a simple SASS file that provides a number of useful mixins to achieve CS
 
 ### Syntax
 
-    +box_shadow(!x_offset, !y_offset, !blur, !color)
+    +box-shadow(!x_offset, !y_offset, !blur, !color)
 
 ### Browser Support
 
@@ -37,8 +37,8 @@ This is a simple SASS file that provides a number of useful mixins to achieve CS
 
 ### Syntax
 
-    +vertical_gradient(!from_color, !to_color)
-    +horizontal_gradient(!from_color, !to_color)
+    +vertical-gradient(!from_color, !to_color)
+    +horizontal-gradient(!from_color, !to_color)
 
 ### Browser Support
 
@@ -46,7 +46,7 @@ This is a simple SASS file that provides a number of useful mixins to achieve CS
 * Safari
 * Chrome
 * Opera
-* IE (only vertical)
+* IE (vertical only)
 
 # Transformations
 
