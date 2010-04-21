@@ -2,6 +2,8 @@
 
 This is a simple SASS file that provides a number of useful mixins to achieve CSS3 effects cross-browser. For each rule, the styles are implemented for as many browsers as possible.
 
+**Note:** You must use `haml >= 3.0` for this to work as it uses the dollar assignment operator and equals-less assignment. This may mean installing the `--pre` version of HAML until its official release.
+
 # Box Effects
 
 ## Rounded Corners
